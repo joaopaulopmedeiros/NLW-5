@@ -19,3 +19,14 @@
         text-transform: capitalize;
     }
 }
+
+@media(max-width: 576px) {
+    .headerContainer {
+        p, span {
+            display: none;
+        }
+        img {
+            margin: 0 auto;
+        }
+    }
+}
