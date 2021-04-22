@@ -6,6 +6,7 @@ import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import convertDurationToTimeString from '../utils/convertDurationToTimeString';
 import { Episode } from '../types/Episodes';
+import Revalidate from '../utils/revalidate';
 
 import styles from './home.module.scss';
 
@@ -117,6 +118,6 @@ export const getStaticProps: GetStaticProps = async () => {
       episodes,
       latestEpisodes,
     },
-    revalidate: 60 * 60 * 8,
+    revalidate: Revalidate.At,
   }
 }

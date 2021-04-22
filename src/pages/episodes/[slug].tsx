@@ -6,6 +6,7 @@ import ptBR from 'date-fns/locale/pt-BR';
 import convertDurationToTimeString from '../../utils/convertDurationToTimeString';
 import { Episode } from '../../types/Episodes';
 import Image from 'next/image';
+import Revalidate from '../../utils/revalidate';
 
 import styles from './styles.module.scss';
 
@@ -68,6 +69,6 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
         props: {
             episode,
         },
-        revalidate: 60 * 60 * 8,
+        revalidate: Revalidate.At,
     }
 }
