@@ -4,24 +4,14 @@ import { api } from '../../services/api';
 import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import convertDurationToTimeString from '../../utils/convertDurationToTimeString';
+import { Episode } from '../../types/Episodes';
 
-
-type Episode = {
-    id: string;
-    title: string;
-    thumbnail: string;
-    members: string;
-    publishedAt: string;
-    duration: number;
-    durationAsString: string;
-    url: string;
-}
 
 type EpisodeProps = {
     episode: Episode;
 }
 
-export default function Episode({episode}: EpisodeProps) {
+export default function Episodes({episode}: EpisodeProps) {
     const router = useRouter();
     const title = String(router.query.slug).split('-').join(' ');
 

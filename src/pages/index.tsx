@@ -5,19 +5,9 @@ import { api } from '../services/api';
 import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import convertDurationToTimeString from '../utils/convertDurationToTimeString';
+import { Episode } from '../types/Episodes';
 
 import styles from './home.module.scss';
-
-type Episode = {
-  id: string;
-  title: string;
-  thumbnail: string;
-  members: string;
-  publishedAt: string;
-  duration: number;
-  durationAsString: string;
-  url: string;
-}
 
 type HomeProps = {
   episodes: Episode[];
