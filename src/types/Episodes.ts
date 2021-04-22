@@ -7,4 +7,5 @@ export type Episode = {
     duration: number;
     durationAsString: string;
     url: string;
+    description: string;
 }
